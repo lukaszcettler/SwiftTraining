@@ -10,8 +10,8 @@ class ViewController: UITableViewController {
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
-        
-        for item in items {
+              
+        for item in items.sorted() {
             if item.hasPrefix("abstract"){
                 pictures.append(item)
             }
@@ -35,6 +35,8 @@ class ViewController: UITableViewController {
         // if any of those things return nil (fail), then the code inside the if let braces won’t execute
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             vc.selectedImage = pictures[indexPath.row]
+            vc.selectedPicture = indexPath.row + 1
+            vc.totalPictures = pictures.count
             navigationController?.pushViewController(vc, animated: true)
         }
     }

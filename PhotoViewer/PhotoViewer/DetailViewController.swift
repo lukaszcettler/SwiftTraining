@@ -5,6 +5,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     
     var selectedImage: String?
+    var selectedPicture: Int?
+    var totalPictures: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +17,7 @@ class DetailViewController: UIViewController {
         
         title = selectedImage
         navigationItem.largeTitleDisplayMode = .never
+        self.title = "Picture \(selectedPicture!) of \(totalPictures!)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
