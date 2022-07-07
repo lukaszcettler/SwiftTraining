@@ -16,6 +16,9 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
+        
+        title = "Photo Viewer"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,9 +32,8 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // try loading the "Detail" view controller and typecasting it to be DetailViewController
+        // if any of those things return nil (fail), then the code inside the if let braces won’t execute
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-            
             vc.selectedImage = pictures[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
