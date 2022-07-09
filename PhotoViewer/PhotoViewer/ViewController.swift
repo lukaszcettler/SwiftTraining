@@ -18,6 +18,7 @@ class ViewController: UITableViewController {
         }
         
         title = "Photo Viewer"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommend))
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -39,6 +40,14 @@ class ViewController: UITableViewController {
             vc.totalPictures = pictures.count
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    @objc func recommend() {
+        let shareLink = "Try this app: https://github.com/lukaszcettler/SwiftTraining/tree/main/PhotoViewer"
+    
+        let vc = UIActivityViewController(activityItems: [shareLink], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
 
 
