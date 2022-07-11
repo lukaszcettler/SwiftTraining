@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,27 +15,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zW-Ia-a77">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zW-Ia-a77">
                                 <rect key="frame" x="107" y="240" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="blg-fS-wHT"/>
+                                    <constraint firstAttribute="width" constant="200" id="dlF-Kw-GzT"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpH-Rk-14S"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBZ-YC-cZO">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBZ-YC-cZO">
                                 <rect key="frame" x="107" y="398" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="60N-8s-v7x"/>
+                                    <constraint firstAttribute="height" constant="100" id="hTm-i3-xgy"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZiX-3f-RnH"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMw-IQ-rq8">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMw-IQ-rq8">
                                 <rect key="frame" x="107" y="556" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="454-mh-kGn"/>
+                                    <constraint firstAttribute="width" constant="200" id="pF2-DG-VwO"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goF-70-AuD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oBZ-YC-cZO" firstAttribute="top" secondItem="7zW-Ia-a77" secondAttribute="bottom" constant="58" id="MVg-Kq-gRC"/>
+                            <constraint firstItem="7zW-Ia-a77" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XqT-E7-7yt"/>
+                            <constraint firstItem="oBZ-YC-cZO" firstAttribute="centerX" secondItem="7zW-Ia-a77" secondAttribute="centerX" id="YPx-Y9-b8j"/>
+                            <constraint firstItem="7zW-Ia-a77" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="nDp-aW-zNf"/>
+                            <constraint firstItem="DMw-IQ-rq8" firstAttribute="centerX" secondItem="oBZ-YC-cZO" secondAttribute="centerX" id="rd1-La-UsE"/>
+                            <constraint firstItem="DMw-IQ-rq8" firstAttribute="top" secondItem="oBZ-YC-cZO" secondAttribute="bottom" constant="58" id="yX8-pX-A41"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UfT-Vg-0iU"/>
                     <connections>
@@ -70,8 +95,5 @@
     </scenes>
     <resources>
         <image name="us" width="200" height="100"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
