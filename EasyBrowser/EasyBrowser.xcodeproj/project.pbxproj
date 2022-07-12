@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CB60C79287D9E5400D9D5CA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB60C78287D9E5400D9D5CA /* TableViewController.swift */; };
 		5CC9573F287C78580074D70E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC9573E287C78580074D70E /* AppDelegate.swift */; };
 		5CC95741287C78580074D70E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95740287C78580074D70E /* SceneDelegate.swift */; };
 		5CC95743287C78580074D70E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95742287C78580074D70E /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CB60C78287D9E5400D9D5CA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5CC9573B287C78580074D70E /* EasyBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC9573E287C78580074D70E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CC95740287C78580074D70E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				5CC9573E287C78580074D70E /* AppDelegate.swift */,
 				5CC95740287C78580074D70E /* SceneDelegate.swift */,
 				5CC95742287C78580074D70E /* ViewController.swift */,
+				5CB60C78287D9E5400D9D5CA /* TableViewController.swift */,
 				5CC95744287C78580074D70E /* Main.storyboard */,
 				5CC95747287C785C0074D70E /* Assets.xcassets */,
 				5CC95749287C785C0074D70E /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB60C79287D9E5400D9D5CA /* TableViewController.swift in Sources */,
 				5CC95743287C78580074D70E /* ViewController.swift in Sources */,
 				5CC9573F287C78580074D70E /* AppDelegate.swift in Sources */,
 				5CC95741287C78580074D70E /* SceneDelegate.swift in Sources */,
