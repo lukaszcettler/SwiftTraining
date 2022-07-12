@@ -47,7 +47,9 @@ class ViewController: UIViewController {
             view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
         }
         
-        view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "V:|[labelOne]-[labelTwo]-[labelThree]-[labelFour]-[labelFive]", options: [], metrics: nil, views: viewsDictionary))
+        let metrics = ["labelHeight": 80]
+        view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "V:|[labelOne(labelHeight@999)]-[labelTwo(labelOne)]-[labelThree(labelOne)]-[labelFour(labelOne)]-[labelFive(labelOne)]->=10-|", options: [], metrics: metrics, views: viewsDictionary))
+        // @999 assigns priority to a given constraint, using (labelOne) makes other labels the same height.
         
     }
 
