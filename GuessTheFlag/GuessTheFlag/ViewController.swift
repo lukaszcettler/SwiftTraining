@@ -41,8 +41,10 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         title = countries[correctAnswer].uppercased()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score \(score)".uppercased())
         navigationItem.rightBarButtonItem?.tintColor = .black
+        
         
         questionsAsked += 1
     }
